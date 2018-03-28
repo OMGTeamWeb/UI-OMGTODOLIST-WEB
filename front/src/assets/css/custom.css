@@ -1,0 +1,143 @@
+body {
+	/*background-image: url("../img/bg.jpg");*/
+	background-size: 500px 500px;
+	font-family: 'Cabin', sans-serif;
+}
+
+/* ESTUDIANTE - INICIO.HTML */
+
+.btn-temas .custom {
+	margin-top: 20px;
+	font-size: 30px;
+	padding: 40px 40px 40px;
+}
+
+/* TUTOR - INICIO.HTML */
+
+.tutor .logo {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.tutor .logo img {
+	width: 80%;
+}
+
+.tutor .btn-menu .custom {
+	margin-top: 20px;
+	font-size: 30px;
+	padding: 40px 40px 40px;
+	text-transform: none;
+}
+
+.tutor .title {
+	font-weight: 700;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+/* TUTOR ADD.PHP */
+
+.tutor-add .btn-block {
+	font-size: 25px;
+	padding: 15px 15px 15px;
+}
+
+/* TUTOR GESTION.PHP */
+
+.tutor-gestion .logo {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.tutor-gestion .logo img {
+	width: 50%;
+}
+
+/* LOGIN VIEW */
+
+.login .logo {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.login .logo img {
+	width: 90%;
+}
+
+.login .title {
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.login .img-heroes img {
+	width: 20%;
+	margin-bottom: 20px;
+}
+
+.login .student .control-label {
+	padding-top: 8px;
+	font-size: 15px;
+}
+
+.login .student .form-control {
+	margin-bottom: 20px;
+}
+
+.login .teacher .form-control {
+	height: 70px;
+	font-size: 35px;
+	border-radius: 10px;
+}
+
+.login .teacher .input-group-addon {
+	font-size: 35px;
+	padding: 7px 18px;
+}
+
+.login .teacher .input-group-addon .user {
+	font-size: 35px;
+	padding: 7px 5px;
+}
+
+.login .btn-login {
+	margin-top: 20px;
+	font-size: 25px;
+	padding: 30px 20px 30px;
+}
+
+/* ESTUDIANTE - INICIO.HTML */
+
+.student .logo {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.student .logo img {
+	width: 40%;
+}
+
+/* LEVEL - SUMA GRANDE */
+
+.level .numero {
+	font-size: 100px;
+	font-weight: 500;
+	color: blue;
+}
+
+.level .igual {
+	font-size: 100px;
+	font-weight: 500;
+	color: black;
+}
+
+.level .signo {
+	font-size: 120px;
+	font-weight: 700;
+	color: black;
+}
+
+.level .btn-number {
+	font-size: 50px;
+	padding: 30px 30px 30px;
+}

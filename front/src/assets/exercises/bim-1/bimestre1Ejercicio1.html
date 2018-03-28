@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- -->
+<head>
+    <title>Bimestre 1 Ejercicio 1</title>
+    <script src="js/processing.min.js"></script>
+
+</head>
+
+<body>
+
+    <p id="data">Esperando respuesta de processing</p>
+
+        <div id = "dataFromHtml" value = "0,5,0"> 
+    </div>
+
+    <!--Cear canvas con processing-->
+    <canvas id="bimestre1Ejercicio1" data-processing-sources="processing/bimestre1Ejercicio1.pde"></canvas>
+    
+    <script type="application/javascript">
+        //variables
+        var dataLevelReturn = [0,0,0];
+
+        function getDataFromHtml(){
+            return document.getElementById('dataFromHtml').getAttribute('value');
+        }
+
+        //datos que se mandan a processing para crear nivel
+        var dataLevelJS = [1,5,0];
+
+        //funcion que se usa en processin 
+        //recibe nuevos datos de nivel desde processing
+        function returnDataPros(data){
+            dataLevelReturn = data.split(",").map(Number);
+            document.getElementById("data").innerHTML = "Resultados del juego y el nivel: " + dataLevelReturn;
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        //Funcion que recibe el nombre del id del canvas donde esta el PDE 
+        //del ejercicio que se está jugando
+        //la funcion thingsInBasket() regresa los datos del juego para 
+        //ser evaluados
+        function nextLevel(nameCanvasPDE){
+            var pjs = Processing.getInstanceById(nameCanvasPDE);
+            pjs.returnToJS();
+
+        }
+    </script>
+    <br>
+    <!--Button para regresar desde processing info del ejercicio hecho-->
+    <button type="button" onclick="nextLevel('bimestre1Ejercicio1')">Continuar</button>
+
+
+</body>
+
+</html>
