@@ -2,6 +2,7 @@ var router = require('express').Router();
 
 // api router will mount other routers
 // for all our resources
+router.use('/player', require('./player/playerRoutes'));
 router.use('/teacher', require('./teacher/teacherRoutes'));
 router.use('/student', require('./student/studentRoutes'));
 router.use('/group', require('./group/groupRoutes'));

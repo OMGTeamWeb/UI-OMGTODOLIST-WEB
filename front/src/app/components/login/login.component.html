@@ -1,0 +1,18 @@
+<div class="contact-agileinfo">
+  <div class="container">
+    <h2>Login</h2>
+    <!-- inicia login  -->
+    <div class="col-md-12 contact-right-w3">
+      <form name="form" (ngSubmit)="onLogin()" novalidate>
+        <div class="">
+          <input type="text" class="text" name="username" [(ngModel)]="player.username" placeholder="Username" required="">
+        </div>
+        <div class="">
+          <input type="password" class="text" name="password" [(ngModel)]="player.password" placeholder="password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+      </form>
+    </div>
+    <!-- Termina login -->
+  </div>
+</div>
