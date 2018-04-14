@@ -1,73 +1,32 @@
-<!-- banner -->
-<div class="sub-banner">
-  <!-- Navbar -->
-  <nav class="navbar navbar-default">
-    <div class="container">
 
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-        <a routerLink="/"><h1><img src="assets/img/c1.png" alt=" " /> GoT Game</h1></a>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hover-effect "><a routerLink="/about">About</a></li>
-          <li class="hover-effect"><a routerLink="/games">Download Game</a></li>
-          <li class="hover-effect"><a routerLink="/news">News</a></li>
-          <li class="hover-effect"><a routerLink="/register">Register</a></li>
-          <li class="hover-effect"><a routerLink="/login">Login</a></li>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/player/home">otro</a>
+      </li>
 
-        </ul>
-      </div>
+    </ul>
 
-    </div>
-  </nav>
-</div>
+  </div>
+</nav>
 
 <router-outlet></router-outlet>
 
 <!-- footer -->
 <div class="footer">
-  <div class="container">
-    <div class="col-md-3 footer-left-w3">
-      <h4>Contact</h4>
-      <ul>
-        <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-        <li><a href="mailto:example@mail.com"><h6>noforthemoment@mail.com</h6></a></li>
-      </ul>
-      <ul>
-        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-        <li>
-          <h6>+9289748973894</h6></li>
-      </ul>
-      <ul>
-        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
-        <li>
-          <h6>Tec de Monterrey</h6></li>
-      </ul>
-      <ul>
-        <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
-        <li>
-          <h6>(0033)6544 5453 644</h6></li>
-      </ul>
-    </div>
-    <div class="col-md-5 footer-middle-w3">
-    </div>
-    <div class="col-md-4 footer-right-w3">
-      <a href="index.html"><h4>Game <img src="images/f1.png" alt=" " /> Info</h4></a>
-      <p>In this part could be one description about our team or something.</p>
-      <p class="agileinfo">.</p>
-    </div>
-    <div class="clearfix"></div>
-    <div class="copyright">
-      <p>&copy; 2018 GZ. All Rights Reserved | MMO Bros <a href="http://w3layouts.com/" target="_blank">  </a></p>
-    </div>
-  </div>
+  Soy el footer
 </div>
 
 <!-- //footer -->
