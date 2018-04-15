@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from './components/home/home.component';
+import { TasksComponent } from './components/tasks/tasks.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     LandingComponent,
    LoginComponent,
-   HomeComponent
+   HomeComponent,
+   TasksComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     RouterModule.forRoot([
       { path: "", component: LandingComponent },
       { path: "login", component: LoginComponent},
-      { path: "player/home", component: HomeComponent}
-
+      { path: "player/home", component: HomeComponent},
+      {path: "tasks", component:TasksComponent}
     ])
   ],
   providers: [AuthService],
