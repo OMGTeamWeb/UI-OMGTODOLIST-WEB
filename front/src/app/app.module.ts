@@ -47,7 +47,7 @@ import { RegistroComponent } from './components/registro/registro.component';
       { path: "player/home", component: HomeComponent},
       { path: "tasks", component:TasksComponent},
       { path:  "createtask", component: CreatetaskComponent},
-      { path: "edittask", component: EdittaskComponent}
+      { path: "edittask", component: EdittaskComponent},
       { path: "user/home", component: HomeComponent},
       { path: "register", component: RegistroComponent}
     ])
@@ -56,3 +56,4 @@ import { RegistroComponent } from './components/registro/registro.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 
