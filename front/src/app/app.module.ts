@@ -32,13 +32,10 @@ import { RegistroComponent } from './components/registro/registro.component';
     LandingComponent,
    LoginComponent,
    HomeComponent,
-<<<<<<< HEAD
    TasksComponent,
    CreatetaskComponent,
-   EdittaskComponent
-=======
+   EdittaskComponent,
    RegistroComponent
->>>>>>> 467f91773f79b6547dd8e9cebf8e24d00f576b1a
   ],
   imports: [
     BrowserModule,
@@ -47,15 +44,12 @@ import { RegistroComponent } from './components/registro/registro.component';
     RouterModule.forRoot([
       { path: "", component: LandingComponent },
       { path: "login", component: LoginComponent},
-<<<<<<< HEAD
       { path: "player/home", component: HomeComponent},
       { path: "tasks", component:TasksComponent},
       { path:  "createtask", component: CreatetaskComponent},
       { path: "edittask", component: EdittaskComponent}
-=======
       { path: "user/home", component: HomeComponent},
       { path: "register", component: RegistroComponent}
->>>>>>> 467f91773f79b6547dd8e9cebf8e24d00f576b1a
     ])
   ],
   providers: [AuthService,DatauserService],
