@@ -14,10 +14,16 @@ import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { AuthService } from './services/auth.service';
+import { DatauserService } from './services/datauser.service';
+
 import { HomeComponent } from './components/home/home.component';
+<<<<<<< HEAD
 import { TasksComponent } from './components/tasks/tasks.component';
 import { CreatetaskComponent } from './components/createtask/createtask.component';
 import { EdittaskComponent } from './components/edittask/edittask.component';
+=======
+import { RegistroComponent } from './components/registro/registro.component';
+>>>>>>> 467f91773f79b6547dd8e9cebf8e24d00f576b1a
 
 
 @NgModule({
@@ -26,9 +32,13 @@ import { EdittaskComponent } from './components/edittask/edittask.component';
     LandingComponent,
    LoginComponent,
    HomeComponent,
+<<<<<<< HEAD
    TasksComponent,
    CreatetaskComponent,
    EdittaskComponent
+=======
+   RegistroComponent
+>>>>>>> 467f91773f79b6547dd8e9cebf8e24d00f576b1a
   ],
   imports: [
     BrowserModule,
@@ -37,13 +47,18 @@ import { EdittaskComponent } from './components/edittask/edittask.component';
     RouterModule.forRoot([
       { path: "", component: LandingComponent },
       { path: "login", component: LoginComponent},
+<<<<<<< HEAD
       { path: "player/home", component: HomeComponent},
       { path: "tasks", component:TasksComponent},
       { path:  "createtask", component: CreatetaskComponent},
       { path: "edittask", component: EdittaskComponent}
+=======
+      { path: "user/home", component: HomeComponent},
+      { path: "register", component: RegistroComponent}
+>>>>>>> 467f91773f79b6547dd8e9cebf8e24d00f576b1a
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService,DatauserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

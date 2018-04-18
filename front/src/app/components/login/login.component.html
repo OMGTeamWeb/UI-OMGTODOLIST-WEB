@@ -1,18 +1,47 @@
 <div class="contact-agileinfo">
   <div class="container">
-    <h2>Login</h2>
-    <!-- inicia login  -->
-    <div class="col-md-12 contact-right-w3">
-      <form name="form" (ngSubmit)="onLogin()" novalidate>
-        <div class="">
-          <input type="text" class="text" name="username" [(ngModel)]="player.username" placeholder="Username" required="">
-        </div>
-        <div class="">
-          <input type="password" class="text" name="password" [(ngModel)]="player.password" placeholder="password">
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-      </form>
+
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <br>
+    <div class="row">
+      <div class="col-lg-12 col-xs-8 text-center">
+        <h1>
+          <p class="text-warning">Login</p>
+        </h1>
+
+        <!--Imagen login-->
+        <img src="/assets/img/login.png" class="Responsive image">
+
+        <!--Email y password-->
+        <form name="form" (ngSubmit)="onLogin()" novalidate>
+          <fieldset>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-lg-4 text-left">
+              </div>
+              <div class="col-lg-4 text-left">
+                <div class="form-group">
+                  <label for="inputEmail">
+                    <p class="text-info">Username </p>
+                  </label>
+                  <input type="email" class="form-control" name="username" id="inputEmail" aria-describedby="emailHelp" [(ngModel)]="user.username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">
+                    <p class="text-info">Password</p>
+                  </label>
+                <input type="password" class="form-control" name="password" id="inputPassword" aria-describedby="passwordHelp" [(ngModel)]="user.password" placeholder="Password">
+                <a id="passwordHelp" class="nav-link" href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <br>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+              </div>
+              <div class="col-lg-4"></div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
-    <!-- Termina login -->
   </div>
 </div>

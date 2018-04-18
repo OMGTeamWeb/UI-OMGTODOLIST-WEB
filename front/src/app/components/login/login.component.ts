@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { loginPlayer } from '../../models/player';
+import { loginUser } from '../../models/user';
 
 @Component({
   selector: 'app-login',
@@ -11,14 +11,14 @@ import { loginPlayer } from '../../models/player';
 export class LoginComponent {
 
   loginError: boolean = false;
-  player: loginPlayer = new loginPlayer();
+  user: loginUser = new loginUser();
 
   constructor(private router: Router, private auth: AuthService) { }
 
   onLogin(): void {
-    this.auth.login(this.player)
-      .then((player) => {
-        localStorage.setItem('token', player.json().token);
+    this.auth.login(this.user)
+      .then((user) => {
+        localStorage.setItem('token', user.json().token);
 
         const token = localStorage.getItem('token');
         if (token) {
@@ -27,7 +27,7 @@ export class LoginComponent {
               console.log(user.json());
               if (user.json().status === 'success') {
                 //console.log("holaaaaaaaaa");
-                this.router.navigateByUrl('player/home');
+                this.router.navigateByUrl('user/home');
               } else {
                 this.router.navigateByUrl('login');
               }
