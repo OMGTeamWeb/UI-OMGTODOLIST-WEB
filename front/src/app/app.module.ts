@@ -17,6 +17,7 @@ import { AuthService } from './services/auth.service';
 import { HomeComponent } from './components/home/home.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { CreatetaskComponent } from './components/createtask/createtask.component';
+import { EdittaskComponent } from './components/edittask/edittask.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CreatetaskComponent } from './components/createtask/createtask.componen
    LoginComponent,
    HomeComponent,
    TasksComponent,
-   CreatetaskComponent
+   CreatetaskComponent,
+   EdittaskComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { CreatetaskComponent } from './components/createtask/createtask.componen
       { path: "login", component: LoginComponent},
       { path: "player/home", component: HomeComponent},
       { path: "tasks", component:TasksComponent},
-      { path:  "createtask", component: CreatetaskComponent}
+      { path:  "createtask", component: CreatetaskComponent},
+      { path: "edittask", component: EdittaskComponent}
     ])
   ],
   providers: [AuthService],
