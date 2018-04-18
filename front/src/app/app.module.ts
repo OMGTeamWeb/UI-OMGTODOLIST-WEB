@@ -33,7 +33,7 @@ import { RegistroComponent } from './components/registro/registro.component';
     RouterModule.forRoot([
       { path: "", component: LandingComponent },
       { path: "login", component: LoginComponent},
-      { path: "player/home", component: HomeComponent},
+      { path: "user/home", component: HomeComponent},
       { path: "registro", component: RegistroComponent}
     ])
   ],

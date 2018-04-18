@@ -23,16 +23,15 @@
               <div class="col-lg-4 text-left">
                 <div class="form-group">
                   <label for="inputEmail">
-                    <p class="text-info">Email address</p>
+                    <p class="text-info">Username </p>
                   </label>
-                  <input type="email" class="form-control" name="username" id="inputEmail" aria-describedby="emailHelp" [(ngModel)]="player.username" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <input type="email" class="form-control" name="username" id="inputEmail" aria-describedby="emailHelp" [(ngModel)]="user.username" placeholder="Enter username">
                 </div>
                 <div class="form-group">
                   <label for="inputPassword">
                     <p class="text-info">Password</p>
                   </label>
-                <input type="password" class="form-control" name="password" id="inputPassword" aria-describedby="passwordHelp" [(ngModel)]="player.password" placeholder="Password">
+                <input type="password" class="form-control" name="password" id="inputPassword" aria-describedby="passwordHelp" [(ngModel)]="user.password" placeholder="Password">
                 <a id="passwordHelp" class="nav-link" href="#">¿Olvidaste tu contraseña?</a>
                 </div>
                 <br>
