@@ -16,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from './components/home/home.component';
 import { TasksComponent } from './components/tasks/tasks.component';
+import { CreatetaskComponent } from './components/createtask/createtask.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
     LandingComponent,
    LoginComponent,
    HomeComponent,
-   TasksComponent
+   TasksComponent,
+   CreatetaskComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
       { path: "", component: LandingComponent },
       { path: "login", component: LoginComponent},
       { path: "player/home", component: HomeComponent},
-      {path: "tasks", component:TasksComponent}
+      { path: "tasks", component:TasksComponent},
+      { path:  "createtask", component: CreatetaskComponent}
     ])
   ],
   providers: [AuthService],
