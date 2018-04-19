@@ -35,18 +35,18 @@ exports.getUserData = function() {
 // Signin function
 exports.verifyUser = function() {
   return function(req, res, next) {
-    var username = req.body.username;
+    var name = req.body.name;
     var password = req.body.password;
 
-    // if no username or password then send
-    if (!username || !password) {
+    // if no name or password then send
+    if (!name || !password) {
       res.status(400).send('Es necesario ingresar un usuario y una contraseña válida');
       return;
     }
 
     // look user up in the DB so we can check
-    // if the passwords match for the username
-    User.findOne({username: username.toLowerCase()})
+    // if the passwords match for the name
+    User.findOne({name: name.toLowerCase()})
       .then(function(user) {
         if (!user) {
           res.status(401).send('El usuario ingresado no existe');
