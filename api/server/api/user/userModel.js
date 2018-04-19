@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
 
 var userSchema = new Schema({
-  username: {
+  name: {
     type: String,
     required: true,
     unique: true
@@ -26,12 +26,12 @@ userSchema.pre('save', function(next) {
   next();
 })
 
-// Always save username in lowercase
+// Always save names in lowercase
 
 userSchema.pre('save', function(next) {
-  if (!this.isModified('username')) return next();
+  if (!this.isModified('name')) return next();
 
-  this.username = this.username.toLowerCase();
+  this.name = this.name.toLowerCase();
   next();
 })
 

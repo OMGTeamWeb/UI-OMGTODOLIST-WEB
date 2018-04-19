@@ -82,23 +82,23 @@ exports.status = function(req, res) {
 
 // Custom Functions //
 
-// Verify unique Username when
+// Verify unique name when
 // creating a new User
 exports.verifyUser = function() {
   return function(req, res, next) {
-    var username = req.body.username;
+    var name = req.body.name;
     var email = req.body.email;
     var password = req.body.password;
 
-    if (!username || !email || !password) {
+    if (!name || !email || !password) {
       res.status(400).send('¡Hubo un error al añadir al User! Verifique que no exista ningún campo vacío.');
       return;
     }
 
-    User.findOne({ username: username.toLowerCase() })
+    User.findOne({ name: name.toLowerCase() })
     .then(function(user) {
       if (user) {
-        res.status(400).send('¡Ya existe un User dado de alta con el usuario: "' + username + '"!');
+        res.status(400).send('¡Ya existe un User dado de alta con el usuario: "' + name + '"!');
       } else {
         req.user = user;
         next();
@@ -109,23 +109,23 @@ exports.verifyUser = function() {
   };
 };
 
-// Verify unique username when updating user
+// Verify unique name when updating user
 
 exports.verifyUpdateUser = function() {
   return function(req, res, next) {
     var currentID = req.user.id;
 
-    var username = req.body.username;
+    var name = req.body.name;
     var email = req.body.email;
     var password = req.body.password;
 
 
-    if (!username || !password || email) {
+    if (!name || !password || email) {
       res.status(400).send('¡Hubo un error al actualizar tu perfil! Verifique que no exista ningún campo vacío.');
       return;
     }
 
-    User.findOne({username: username.toLowerCase()})
+    User.findOne({name: name.toLowerCase()})
     .then(function(user) {
       if (user) {
         if (user._id != currentID) {
