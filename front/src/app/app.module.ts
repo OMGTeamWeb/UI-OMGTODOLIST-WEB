@@ -14,7 +14,13 @@ import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { AuthService } from './services/auth.service';
+import { DatauserService } from './services/datauser.service';
+
 import { HomeComponent } from './components/home/home.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { CreatetaskComponent } from './components/createtask/createtask.component';
+import { EdittaskComponent } from './components/edittask/edittask.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 
 @NgModule({
@@ -22,7 +28,11 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     LandingComponent,
    LoginComponent,
-   HomeComponent
+   HomeComponent,
+   TasksComponent,
+   CreatetaskComponent,
+   EdittaskComponent,
+   RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -31,11 +41,15 @@ import { HomeComponent } from './components/home/home.component';
     RouterModule.forRoot([
       { path: "", component: LandingComponent },
       { path: "login", component: LoginComponent},
-      { path: "player/home", component: HomeComponent}
-
+      { path: "player/home", component: HomeComponent},
+      { path: "tasks", component:TasksComponent},
+      { path:  "createtask", component: CreatetaskComponent},
+      { path: "edittask", component: EdittaskComponent},
+      { path: "user/home", component: HomeComponent},
+      { path: "register", component: RegistroComponent}
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService,DatauserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
