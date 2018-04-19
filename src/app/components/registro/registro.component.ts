@@ -22,7 +22,7 @@ export class RegistroComponent {
 
   addUser(): void {
     this.dataUser.createUser(this.user)
-      .then((teacher) => {
+      .then((user) => {
         //console.log(user.json());
       })
       .catch((err) => {
