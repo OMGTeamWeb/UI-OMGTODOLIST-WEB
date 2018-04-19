@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DatauserService {
 
-  private BASE_URL: string = 'http://localhost:3000/api/user';
+  private BASE_URL: string = 'https://desolate-taiga-56447.herokuapp.com/api/user';
   private headers: Headers = new Headers({ 'Content-Type': 'application/json' });
 
   users:any;
