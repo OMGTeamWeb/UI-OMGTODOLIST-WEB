@@ -24,8 +24,13 @@ export class RegistroComponent {
     this.dataUser.createUser(this.user)
       .then((user) => {
         //console.log(user.json());
+        console.log(user.json());
+          this.router.navigateByUrl('user/home');
+
       })
       .catch((err) => {
+        this.router.navigateByUrl('register');
+
         console.log(err);
       })
   }
