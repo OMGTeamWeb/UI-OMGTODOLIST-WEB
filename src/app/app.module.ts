@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import { AuthService } from './services/auth.service';
 import { DatauserService } from './services/datauser.service';
+import { DatataskService} from './services/datatask.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { TasksComponent } from './components/tasks/tasks.component';
