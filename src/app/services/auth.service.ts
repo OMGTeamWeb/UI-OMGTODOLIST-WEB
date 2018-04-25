@@ -4,7 +4,7 @@ import { loginUser } from '../models/user';
 
 @Injectable()
 export class AuthService {
-  private BASE_URL_USER: string = 'http://localhost:3000/api/user';
+  private BASE_URL_USER: string = 'https://desolate-taiga-56447.herokuapp.com/api/user';
   private headers: Headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }

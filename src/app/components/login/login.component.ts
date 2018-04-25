@@ -22,20 +22,26 @@ export class LoginComponent {
 
         const token = localStorage.getItem('token');
         if (token) {
-          this.auth.ensureAuthenticated(token)
-            .then((user) => {
-              console.log(user.json());
-              if (user.json().status === 'success') {
-                //console.log("holaaaaaaaaa");
-                this.router.navigateByUrl('user/home');
-              } else {
-                this.router.navigateByUrl('login');
-              }
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
+          this.router.navigateByUrl('user/home');
+
+          // this.auth.ensureAuthenticated(token)
+          //   .then((user) => {
+          //     console.log(user.json());
+          //     if (user.json().status === 'success') {
+          //       //console.log("holaaaaaaaaa");
+          //       this.router.navigateByUrl('user/home');
+          //     } else {
+          //       this.router.navigateByUrl('login');
+          //     }
+          //   })
+          //   .catch((err) => {
+          //     console.log(err);
+          //   });
+        }else{
+        this.router.navigateByUrl('login');
+
+          }
+
       })
       .catch((err) => {
         console.log(err);
