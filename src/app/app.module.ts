@@ -21,6 +21,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { CreatetaskComponent } from './components/createtask/createtask.component';
 import { EdittaskComponent } from './components/edittask/edittask.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { HabitsComponent } from './components/habits/habits.component';
+import { CreateHabitComponent } from './components/create-habit/create-habit.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { RegistroComponent } from './components/registro/registro.component';
    TasksComponent,
    CreatetaskComponent,
    EdittaskComponent,
-   RegistroComponent
+   RegistroComponent,
+   HabitsComponent,
+   CreateHabitComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,10 @@ import { RegistroComponent } from './components/registro/registro.component';
       { path:  "createtask", component: CreatetaskComponent},
       { path: "edittask", component: EdittaskComponent},
       { path: "user/home", component: HomeComponent},
-      { path: "register", component: RegistroComponent}
+      { path: "register", component: RegistroComponent},
+      { path: "habits", component: HabitsComponent},
+      { path: "createhabit", component: CreateHabitComponent}
+
     ])
   ],
   providers: [AuthService,DatauserService],
